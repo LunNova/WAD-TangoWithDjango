@@ -1,7 +1,11 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+
+def renderTemplate(request, template, context = None):
+    return render(request, 'rango/' + template, context)
 
 def index(request):
-    return HttpResponse("Rango says hey there world! <br/> <a href='/rango/about'>About</a>")
+    return renderTemplate(request, "index.html", {'boldmessage': "I am bold font from the context"})
 
 def about(request):
-    return HttpResponse("Rango says this is the about page <br/> <a href='/rango/'>Index</a")
+    return renderTemplate(request, "about.html")

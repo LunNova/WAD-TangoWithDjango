@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+        <title>About Rango</title>
+    </head>
+
+    <body>
+        <h1>Rango says...</h1>
+        About django<br />
+        <a href="/rango/">Index</a><br />
+
+        <h1>Including Static Media</h1>
+        <img src="{% static "images/validity.jpg" %}" alt="Picture of Rango" /> <!-- Images -->
+    </body>
+
+</html>

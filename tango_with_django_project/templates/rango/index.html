@@ -21,6 +21,15 @@
             <strong>There are no categories present.</strong>
        {% endif %}
 
+        <h1>Popular Pages</h1>
+        {% if pages %}
+        <ul>
+            {% for page in pages %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
         <a href="/rango/about/">About</a>
 
         <h1>Including Static Media</h1>
